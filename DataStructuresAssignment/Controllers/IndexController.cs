@@ -30,8 +30,9 @@ namespace DataStructuresAssignment.Controllers
 
             for (int iCount = 0; iCount < 99; iCount++)
             {
-                theLine.Enqueue(randomName());
-                customerInfo.Add(theLine[iCount], randomNumerInRange());
+                string randomName = randomName();
+                theLine.Enqueue(randomName);
+                customerInfo.Add(randomName, randomNumerInRange());
             }
 
             return View();
