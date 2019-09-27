@@ -49,14 +49,16 @@ namespace DataStructuresAssignment.Controllers
             //Add customers to queue
             for (int iCount = 0; iCount < 99; iCount++)
             {
-                string randomName = randomName();
-                theLine.Enqueue(randomName);
+                string personsName = randomName();
+                theLine.Enqueue(personsName);
             }    
 
+            //Foreach statement that gives each customer in the line the number of burgers they ordered that instance. 
+           
             foreach (string customerName in theLine)
             {
                 int numBurgers = randomNumberInRange();
-                if (!isFound(customerName))
+                if (!isFound(customerName, customerInfo))
                 {
                     customerInfo.Add(customerName, 0);
                 }
