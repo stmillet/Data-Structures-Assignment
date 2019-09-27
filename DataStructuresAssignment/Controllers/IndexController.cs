@@ -37,8 +37,8 @@ namespace DataStructuresAssignment.Controllers
             //Add customers to queue
             for (int iCount = 0; iCount < 99; iCount++)
             {
-                string randomName = randomName();
-                theLine.Enqueue(randomName);
+                string personsName = randomName();
+                theLine.Enqueue(personsName);
             }    
 
             foreach (string customerName in theLine)
