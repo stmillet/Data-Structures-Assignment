@@ -18,6 +18,18 @@ namespace DataStructuresAssignment.Controllers
             return names[randomIndex];
         }
 
+        public static bool isFound(string customerName, Dictionary tempDictionary,)
+        {
+            if (tempDictionary.ConatinsKey("customerName"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         //Generate a random number
         public static int randomNumberInRange()
         {
