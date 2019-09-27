@@ -39,9 +39,7 @@ namespace DataStructuresAssignment.Controllers
         // GET: Index
         public ActionResult Index()
         {
-            
-            
-            
+
             //Create queue and dictionary
             Queue<string> theLine = new Queue<string>();
             Dictionary<string, int> customerInfo = new Dictionary<string, int>();
