@@ -18,9 +18,9 @@ namespace DataStructuresAssignment.Controllers
             return names[randomIndex];
         }
 
-        public static bool isFound(string customerName, Dictionary tempDictionary,)
+        public static bool isFound(string customerName, Dictionary<string, int> tempDictionary)
         {
-            if (tempDictionary.ConatinsKey("customerName"))
+            if (tempDictionary.ContainsKey("customerName"))
             {
                 return true;
             }
