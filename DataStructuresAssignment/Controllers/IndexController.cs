@@ -27,7 +27,7 @@ namespace DataStructuresAssignment.Controllers
             Queue<string> theLine = new Queue<string>();
             Dictionary<string, int> customerInfo = new Dictionary<string, int>();
 
-            for (iCount = 0; iCount < 99; iCount++)
+            for (int iCount = 0; iCount < 99; iCount++)
             {
                 theLine.Enqueue(randomName());
             }
