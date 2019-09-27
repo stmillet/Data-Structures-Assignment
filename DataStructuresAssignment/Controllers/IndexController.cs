@@ -24,7 +24,7 @@ namespace DataStructuresAssignment.Controllers
         // GET: Index
         public ActionResult Index()
         {
-            Queue<string> myQueue = new Queue<string>();
+            Queue<string> theLine = new Queue<string>();
             Dictionary<string, int> myDictionary = new Dictionary<string, int>();
 
             return View();
