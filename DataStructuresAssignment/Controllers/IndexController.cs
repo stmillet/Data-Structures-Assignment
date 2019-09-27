@@ -38,10 +38,12 @@ namespace DataStructuresAssignment.Controllers
                 theLine.Enqueue(randomName);
             }    
 
+            //Foreach statement that gives each customer in the line the number of burgers they ordered that instance. 
+           
             foreach (string customerName in theLine)
             {
                 int numBurgers = randomNumberInRange();
-                if !(isFound(customerName))
+                if (!isFound(customerName))
                 {
                     customerInfo.Add(customerName, 0);
                 }
