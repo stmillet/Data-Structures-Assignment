@@ -32,7 +32,7 @@ namespace DataStructuresAssignment.Controllers
             {
                 string randomName = randomName();
                 theLine.Enqueue(randomName);
-            }
+            }    
 
             return View();
         }
