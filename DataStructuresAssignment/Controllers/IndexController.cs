@@ -35,7 +35,6 @@ namespace DataStructuresAssignment.Controllers
             {
                 string randomName = randomName();
                 theLine.Enqueue(randomName);
-                customerInfo.Add(randomName, randomNumberInRange());
             }
 
             return View();
