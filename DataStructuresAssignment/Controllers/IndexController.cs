@@ -40,7 +40,11 @@ namespace DataStructuresAssignment.Controllers
 
             foreach (string customerName in theLine)
             {
-                if (customerName )
+                int numBurgers = randomNumberInRange();
+                if (isFound(customerName))
+                {
+                    customerInfo(customerName,  )
+                }
             }
 
             return View();
