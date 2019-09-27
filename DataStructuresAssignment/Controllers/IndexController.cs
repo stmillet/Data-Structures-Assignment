@@ -21,6 +21,7 @@ namespace DataStructuresAssignment.Controllers
     {
         return Convert.ToInt32(random.NextDouble() * 20);
     }
+
     public class IndexController : Controller
     {
         // GET: Index
@@ -35,6 +36,11 @@ namespace DataStructuresAssignment.Controllers
             {
                 string randomName = randomName();
                 theLine.Enqueue(randomName);
+            }
+
+            foreach (string customerName in theLine)
+            {
+                if (customerName )
             }
 
             return View();
