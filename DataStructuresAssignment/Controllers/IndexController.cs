@@ -20,7 +20,7 @@ namespace DataStructuresAssignment.Controllers
 
         public static bool isFound(string customerName, Dictionary<string, int> tempDictionary)
         {
-            if (tempDictionary.ContainsKey("customerName"))
+            if (tempDictionary.ContainsKey(customerName))
             {
                 return true;
             }
@@ -51,16 +51,24 @@ namespace DataStructuresAssignment.Controllers
                 theLine.Enqueue(personsName);
             }    
 
-            //Foreach statement that gives each customer in the line the number of burgers they ordered that instance. 
+            //For statement that gives each customer in the line the number of burgers they ordered that instance. 
            
-            foreach (string customerName in theLine)
+            for (int iCount = 0; iCount < 99; iCount++)
             {
+                string customerName = theLine.Dequeue();
                 int numBurgers = randomNumberInRange();
                 if (!isFound(customerName, customerInfo))
                 {
                     customerInfo.Add(customerName, 0);
                 }
                 customerInfo[customerName] += numBurgers;
+            }
+
+            //Foreach statement to create the output
+
+            foreach (KeyValuePair<string, int> sName in customerInfo)
+            {
+                ViewBag.Output += sName.Key + " " + sName.Value + "<br>";
             }
 
             return View();
