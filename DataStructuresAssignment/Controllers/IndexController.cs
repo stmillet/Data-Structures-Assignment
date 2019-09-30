@@ -45,7 +45,7 @@ namespace DataStructuresAssignment.Controllers
             Dictionary<string, int> customerInfo = new Dictionary<string, int>();
 
             //Add customers to queue
-            for (int iCount = 0; iCount < 99; iCount++)
+            for (int iCount = 0; iCount < 100; iCount++)
             {
                 string personsName = randomName();
                 theLine.Enqueue(personsName);
@@ -53,7 +53,7 @@ namespace DataStructuresAssignment.Controllers
 
             //For statement that gives each customer in the line the number of burgers they ordered that instance. 
            
-            for (int iCount = 0; iCount < 99; iCount++)
+            for (int iCount = 0; iCount < 100; iCount++)
             {
                 string customerName = theLine.Dequeue();
                 int numBurgers = randomNumberInRange();
