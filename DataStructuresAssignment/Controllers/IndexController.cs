@@ -72,7 +72,7 @@ namespace DataStructuresAssignment.Controllers
             ViewBag.Output = "<table id='ourTable'>";
             ViewBag.Output += "<tr>";
             ViewBag.Output += "<th>Customer Name:</th>";
-            ViewBag.Output += "<th>Burgers Ordered:</th>";
+            ViewBag.Output += "<th class='theBurgers'>Burgers Ordered:</th>";
             ViewBag.Output += "</tr>";
             foreach (KeyValuePair<string, int> sName in items)
             {
