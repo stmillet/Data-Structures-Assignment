@@ -66,7 +66,9 @@ namespace DataStructuresAssignment.Controllers
 
             //Foreach statement to create the output
 
-            foreach (KeyValuePair<string, int> sName in customerInfo)
+            var items = from pair in customerInfo orderby pair.Value ascending select pair;
+
+            foreach (KeyValuePair<string, int> sName in items)
             {
                 ViewBag.Output += sName.Key + " " + sName.Value + "<br>";
             }
