@@ -69,14 +69,14 @@ namespace DataStructuresAssignment.Controllers
             var items = from pair in customerInfo orderby pair.Value ascending select pair;
 
 
-            ViewBag.Output = "<table>";
+            ViewBag.Output = "<table id='ourTable'>";
             ViewBag.Output += "<tr>";
             ViewBag.Output += "<th>Customer Name:</th>";
-            ViewBag.Output += "<th>Burgers Ordered:</th>";
+            ViewBag.Output += "<th class='theBurgers'>Burgers Ordered:</th>";
             ViewBag.Output += "</tr>";
             foreach (KeyValuePair<string, int> sName in items)
             {
-                ViewBag.Output += "<tr><td>" + sName.Key + "</td><td>" + sName.Value + "</td></tr>";
+                ViewBag.Output += "<tr><td>" + sName.Key + "</td><td class='theBurgers'>" + sName.Value + "</td></tr>";
             }
 
             return View();
