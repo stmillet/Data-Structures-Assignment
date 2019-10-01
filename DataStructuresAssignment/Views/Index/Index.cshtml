@@ -8,16 +8,26 @@
 </head>
 
 <style>
-    h1,h2,h3,text
+    h1,h3,text
     {
         text-align:center;
     }
-body { font-size: 16px; background-image: url("https://amp.businessinsider.com/images/5b2d30351ae6623a008b473b-1536-768.jpg") }
+    body 
+    { 
+        font-size: 20px; 
+        background-image: url("https://amp.businessinsider.com/images/5b2d30351ae6623a008b473b-1536-768.jpg");    
+    }
+    
     h1
     {
         font-size: 45px;
         color: navy;
     }
+    h2
+    {
+        font-size: 25px;
+    }
+    
    
 
 </style>
@@ -25,9 +35,13 @@ body { font-size: 16px; background-image: url("https://amp.businessinsider.com/i
 <body>
     <h1>GIVE THE PEOPLE BURGERS</h1>
     <br>
-    <h2>Our Customers</h2>
-    
+
+    <div style="padding-left: 200px">
+        <h2>Our Customers</h2>
+        @Html.Raw((String)ViewBag.Output)
+
+    </div>
+
 </body>
 
-@Html.Raw((String)ViewBag.Output)
 
