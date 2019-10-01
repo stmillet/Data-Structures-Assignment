@@ -4,10 +4,12 @@
 }
 
 <head>
+    <!--link to full CSS stylesheet-->
     <link rel="stylesheet" type="text/css" href="~/Content/AddedStyle.css">
 </head>
 
 <style>
+    /*CSS style additions for text and background*/
     h1,h3,text
     {
         text-align:center;
@@ -36,6 +38,7 @@
     <h1>GIVE THE PEOPLE BURGERS</h1>
     <br>
 
+    <!--Customer name and number output-->
     <div style="padding-left: 200px">
         <h2>Our Customers</h2>
         @Html.Raw((String)ViewBag.Output)
