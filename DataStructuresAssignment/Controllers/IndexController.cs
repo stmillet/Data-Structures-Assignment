@@ -18,6 +18,7 @@ namespace DataStructuresAssignment.Controllers
             return names[randomIndex];
         }
 
+        //this checks to see if each customer is in the dictionary  
         public static bool isFound(string customerName, Dictionary<string, int> tempDictionary)
         {
             if (tempDictionary.ContainsKey(customerName))
@@ -68,7 +69,7 @@ namespace DataStructuresAssignment.Controllers
 
             var items = from pair in customerInfo orderby pair.Value ascending select pair;
 
-
+            //creating a table for the output
             ViewBag.Output = "<table id='ourTable'>";
             ViewBag.Output += "<tr>";
             ViewBag.Output += "<th>Customer Name:</th>";
@@ -76,6 +77,7 @@ namespace DataStructuresAssignment.Controllers
             ViewBag.Output += "</tr>";
             foreach (KeyValuePair<string, int> sName in items)
             {
+                //the viewbag that displays the table of customers and burger
                 ViewBag.Output += "<tr><td>" + sName.Key + "</td><td class='theBurgers'>" + sName.Value + "</td></tr>";
             }
 
